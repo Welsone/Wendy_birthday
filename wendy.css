@@ -1,0 +1,264 @@
+* { margin: 0;
+     padding: 0; 
+     box-sizing: border-box; 
+     font-family: 'Arial', sans-serif; 
+     text-decoration: none;}
+
+body{
+  background: #f7f3ee; /* creme muito suave */
+  color: #222;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  min-height:100vh;
+  text-align:center;
+  overflow: hidden;
+}
+.container{
+  background:#ffffff;
+
+  padding:50px;
+  border-radius:20px;
+
+  max-width:500px;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,0.08),
+  0 3px 8px rgba(0,0,0,0.05);
+  z-index: 1;
+}
+    h1 {
+      font-size: 2.2em;
+      color: #ffe066;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.15em;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .heart {
+      font-size: 2.5em;
+      color: #ff6b81;
+      animation: heartbeat 1s infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes heartbeat {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.4); }
+    }
+
+   button{
+     background-color: #ffe066;
+      color: #0b3d91;
+  border:none;
+  padding:12px 28px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background-color: #ffd633;
+}
+
+    /* Balões azuis */
+    .balloon {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background-color: #42a5f5;
+    border-radius: 50% 50% 50% 50%;
+    bottom: -80px;
+    animation: floatUp 6s linear infinite;
+    }
+
+    .balloon:nth-child(1) { left: 10%; animation-delay: 0s; background-color:#1aa3ff; }
+    .balloon:nth-child(2) { left: 30%; animation-delay: 1s; background-color:#eeff00; }
+    .balloon:nth-child(3) { left: 50%; animation-delay: 2s; background-color:#ff0000; }
+    .balloon:nth-child(4) { left: 70%; animation-delay: 3s; background-color:#f2ff37; }
+    .balloon:nth-child(5) { left: 90%; animation-delay: 4s; background-color:#64b5f6; }
+    .balloon:nth-child(6) { left: 20%; animation-delay: 0.5s; background-color:#fff700; }
+    .balloon:nth-child(7) { left: 40%; animation-delay: 1.5s; background-color:#4fc3f7; }
+    .balloon:nth-child(8) { left: 60%; animation-delay: 2.5s; background-color:#ff0400; }
+    .balloon:nth-child(9) { left: 80%; animation-delay: 3.5s; background-color:#2196f3; }
+    .balloon:nth-child(10) { left: 100%; animation-delay: 4.5s; background-color:#64b5f6; }
+     .balloon:nth-child(11) { left: 15%; animation-delay: 0.3s; background-color:#ffee00; }
+    .balloon:nth-child(12) { left: 5%; animation-delay: 0.7s; background-color:#4fc3f7; }
+    .balloon:nth-child(13) { left: 25%; animation-delay: 1.3s; background-color:#1e88e5; }
+    .balloon:nth-child(14) { left: 35%; animation-delay: 2.7s; background-color:#21f348; }
+    .balloon:nth-child(15) { left: 45%; animation-delay: 3.2s; background-color:#ff0000; }
+    .balloon:nth-child(16) { left: 55%; animation-delay: 0.8s; background-color:#fffb08; }
+    .balloon:nth-child(17) { left: 65%; animation-delay: 1.8s; background-color:#4fc3f7; }
+    .balloon:nth-child(18) { left: 75%; animation-delay: 2.8s; background-color:#04ff00; }
+    .balloon:nth-child(19) { left: 85%; animation-delay: 3.8s; background-color:#2196f3; }
+    .balloon:nth-child(20) { left: 95%; animation-delay: 4.8s; background-color:#ff0000; }
+    
+    
+
+     @keyframes floatUp {
+    0% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(15px) translateY(-300px) rotate(5deg);
+    }
+    75% {
+      transform: translateX(-10px) translateY(-450px) rotate(-5deg);
+    }
+    100% {
+      transform: translateX(0) translateY(-600px) rotate(0deg);
+      opacity: 0;
+    }
+  }
+
+    /* Batata divertida */
+    .potato {
+      font-size: 2em;
+      display: inline-block;
+      animation: bounce 2s infinite;
+      margin-left: 10px;
+      cursor: pointer;
+   
+    }
+
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+/* Tablet - até 1024px */
+@media (max-width: 1024px) {
+  .container {
+    padding: 40px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.9em;
+  }
+
+  p {
+    font-size: 1.05em;
+  }
+
+  .heart {
+    font-size: 2.2em;
+  }
+
+  button {
+    padding: 10px 24px;
+    font-size: 0.95em;
+  }
+
+  .balloon {
+    width: 35px;
+    height: 55px;
+  }
+
+  .potato {
+    font-size: 1.8em;
+  }
+}
+
+/* Mobile - até 767px */
+@media (max-width: 767px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 30px;
+    max-width: 95%;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .heart {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .balloon {
+    width: 30px;
+    height: 50px;
+  }
+
+  .potato {
+    font-size: 1.5em;
+    margin-left: 5px;
+  }
+}
+
+/* Celular pequeno - até 480px */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 20px;
+    max-width: 98%;
+    border-radius: 12px;
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08),
+    0 2px 5px rgba(0,0,0,0.05);
+  }
+
+  h1 {
+    font-size: 1.4em;
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 0.9em;
+    line-height: 1.35;
+    margin-bottom: 15px;
+  }
+
+  .heart {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.85em;
+  }
+
+  .balloon {
+    width: 25px;
+    height: 42px;
+  }
+
+  .potato {
+    font-size: 1.3em;
+    margin-left: 3px;
+  }
+}
